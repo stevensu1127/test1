@@ -23,12 +23,8 @@ if ($foo.Length -eq 0)
 # The values are from 1 to 128. None are 0 initially.
 $array = 1..128
 
-# Put the first char into the array, set its element to 0
-$ascii = [int][char]$foo.Substring(0,1)+1
-$array[$ascii]=0 
-
-# Loop through $foo (from 2nd)
-for ($i = 1; $i -lt $foo.Length; $i++) 
+# Loop through $foo 
+for ($i = 0; $i -lt $foo.Length; $i++) 
 {
   # Get the current char's ASCII value
   $ascii = [int][char]$foo.Substring($i,1)+1
